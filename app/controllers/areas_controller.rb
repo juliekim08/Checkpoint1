@@ -5,8 +5,10 @@ class AreasController < ApplicationController
   end
 
   def circle
-    pi = 3.1416 # Close enough.
+    @pi = 3.1416 # Close enough.
     @r = params[:radius]
+    #Julie adjustment below
+    @area = @pi * @r**2
   end
 
   def triangle
