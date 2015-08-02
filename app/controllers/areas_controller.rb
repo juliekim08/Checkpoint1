@@ -25,6 +25,7 @@ class AreasController < ApplicationController
     @area = @w * @h
   end
 
+  #added entire action below
   def trapezoid
     @a = params[:a].to_f
     @b = params[:b].to_f
@@ -32,11 +33,12 @@ class AreasController < ApplicationController
     @area = 0.5 * (@a + @b) * @h
   end
 
+  #added '@' in front of the first pi
   def ellipse
-    pi = 3.1416 # Close enough.
+    @pi = 3.1416 # Close enough.
     @a = params[:a].to_f
     @b = params[:b].to_f
-    @area = pi * @a * @b
+    @area = @pi * @a * @b
   end
 
   def random
