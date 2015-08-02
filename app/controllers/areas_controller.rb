@@ -6,15 +6,17 @@ class AreasController < ApplicationController
 
   def circle
     @pi = 3.1416 # Close enough.
-    @r = params[:radius]
-    #Julie adjustment below
+    #added @ above #added to_f
+    @r = params[:radius].to_f
+    #added area formula below
     @area = @pi * @r**2
   end
 
   def triangle
     @b = params[:base].to_f
     @h = params[:vertical_height].to_f
-    area = 0.5 * b * h
+    #added '@' to make instance variables
+    @area = 0.5 * @b * @h
   end
 
   def rectangle

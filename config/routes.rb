@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get("/areas/circle/:radius", { :controller => "areas", :action => "circle" })
 
-  get("/areas/triangle/base/vertical_height", { :controller => "areas", :action => "triangle" })
+#added ':' to base and vertical_heigh to pass as params hash
+  get("/areas/triangle/:base/:vertical_height", { :controller => "areas", :action => "triangle" })
 
   get("/areas/trapezoid/:a/:b/:vertical_height", { :controller => "areas", :action => "trapezoid" })
 
